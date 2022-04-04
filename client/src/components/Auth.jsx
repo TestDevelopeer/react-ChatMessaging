@@ -26,7 +26,7 @@ const Auth = () => {
         e.preventDefault();
 
         const {fullName, userName, password, phoneNumber, avatarURL} = form;
-        const URL = `http://localhost:5000/auth`;
+        const URL = `https://testdeveloper-pager.herokuapp.com/auth`;
         const {data: {token, userId, hashedPassword}} = await axios.post(`${URL}/${isSignUp ? 'signup' : 'login'}`, {
             userName, password, fullName, phoneNumber, avatarURL
         });
